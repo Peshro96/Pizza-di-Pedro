@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Grundinställningar för teckenkodning och responsivitet -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza di Pedro - Äkta napolitansk pizza i Sverige</title>
+    <!-- Beskrivning för sökmotorer -->
+    <meta name="description" content="Pizza di Pedro bakar äkta napolitansk pizza i Sverige. Samma deg, samma själ, samma kärlek till pizza.">
+    <!-- CSS och ikoner -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- Header med navigation -->
+        <header class="site-header">
+            <nav class="nav" aria-label="Huvudmeny">
+                <!-- Logotypen -->
+                <a href="#" class="nav-logo">
+                    <img src="img/pedros_logo.png" alt="Pizza di Pedros logotyp">
+                </a>
+                <!-- Menylänkar -->
+                <ul class="nav-links">
+                    <li><a href="#">Hem</a></li>
+                    <!-- Dessa länkar gör inget när man klickar -->
+                    <li><a href="#" onclick="return false;">Här finns vi</a></li>
+                    <li><a href="#" onclick="return false;">Franchise</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero-sektion med bild, rubrik och knapp -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+
+                <!-- Vänster sida: text och knapp -->
+                <article class="hero-content">
+                    <p class="hero-kicker">Napolitansk pizza med svensk själ</p>
+                    <h1>Äkta napolitansk tradition, bakad i Sverige</h1>
+                    <p class="hero-text">
+                        Långjäst deg, vedeldad ugn och råvaror vi växt upp med. Från Neapels gator till svenska kvarter.
+                    </p>
+                    <div class="hero-actions">
+                        <!-- Knappen öppnar PDF-meny i ny flik -->
+                        <a href="meny/pizza_di_pedro_meny.pdf" class="btn btn-primary" target="_blank" rel="noopener">Se meny</a>
+                    </div>
+                </article>
+
+                <!-- Höger sida: Bon Appétit och pizzans arv -->
+                <aside class="hero-aside">
+                    <div class="hero-aside-logo">
+                        <img src="img/pedros_chef.png" alt="Illustration av pizzabagare med texten Bon Appétit">
+                    </div>
+                    <div class="hero-aside-text">
+                        <h2>Pizzans arv</h2>
+                        <p>Från Neapels gator till min fars händer och vidare hit.</p>
+                        <p>Samma deg, samma själ, samma kärlek till pizza.</p>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <!-- Footer med öppettider, sociala medier, kontakt och franchise -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+
+                <!-- Öppettider -->
+                <section class="footer-column öppettider" aria-label="Öppettider">
+                    <h2>Öppettider</h2>
+                    <div class="listor">
+                        <ol>
+                            <li>Måndag</li>
+                            <li>Tisdag</li>
+                            <li>Onsdag</li>
+                            <li>Torsdag</li>
+                            <li>Fredag</li>
+                            <li>Lördag</li>
+                            <li>Söndag</li>
+                        </ol>
+                        <ol>
+                            <li>11–21</li>
+                            <li>11–21</li>
+                            <li>11–21</li>
+                            <li>11–21</li>
+                            <li>11–22</li>
+                            <li>12–22</li>
+                            <li>12–21</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Sociala medier -->
+                <section class="footer-column sociala-medier" aria-label="Sociala medier">
+                    <h2>Följ oss</h2>
+                    <p>Se dagens deg, veckans pizza och kvällens stämning.</p>
+                    <div class="social-icons">
+                        <span class="social-icon" aria-label="Facebook">
+                            <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+                        </span>
+                        <span class="social-icon" aria-label="Instagram">
+                            <i class="fa-brands fa-square-instagram" aria-hidden="true"></i>
+                        </span>
+                        <span class="social-icon" aria-label="Snapchat">
+                            <i class="fa-brands fa-square-snapchat" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </section>
+
+                <!-- Kontaktuppgifter och adress -->
+                <section id="hitta-hit" class="footer-column kontakt" aria-label="Kontakt">
+                    <h2>Hitta hit</h2>
+                    <p>Kungsgatan 111 43<br>703 61 Örebro</p>
+                    <p>Tel: 018-123 123<br>E-post: pedros@lapedro.se</p>
+                </section>
+
+                <!-- Franchise och logotyp i footern -->
+                <div class="footer-brand">
+                    <img src="img/pedros_logo.png" alt="Pizza di Pedros logotyp i footern">
+                    <p id="franchise">Intresserad av franchise? <span class="franchise-text">Läs mer</span></p>
+                </div>
+            </div>
+
+            <!-- Copyright-rad längst ner -->
+            <p class="copyright">© Pizza di Pedro – all rights reserved</p>
+        </footer>
+
+    </div>
+</body>
+</html>

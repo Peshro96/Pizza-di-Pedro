@@ -1,0 +1,305 @@
+/* Egen font, laddas in från projektet */
+@font-face {
+    font-family: "Carmo";
+    src: url("../fonts/static/CormorantGaramond-SemiBold.ttf") format("truetype");
+}
+
+/* Tar bort standardmarginaler och padding, samt fixar box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grundstil för body, sätter font och färger */
+body {
+    font-family: "Carmo", serif;
+    background: #050505;
+    color: #f5e3c0;
+}
+
+/* Bilder får aldrig bli större än sin container */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Länkar ärver färg och får ingen understrykning */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Gör så att sidan alltid fyller hela fönstret och footern hamnar längst ner */
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header med svart bakgrund och lite skugga under */
+.site-header {
+    background: #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    min-height: 110px; /* Gör headern lite högre så loggan syns */
+}
+
+/* Navigationen ligger centrerad och har lite padding */
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 1.2rem 2rem; /* Mer padding för högre header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Logotypen placeras längst till vänster i nav */
+.nav-logo {
+    position: absolute;
+    left: 1.2rem;
+}
+
+/* Logotypbilden får en fast bredd */
+.nav-logo img {
+    width: 120px; /* Gör loggan större */
+    max-height: 100px;
+}
+
+/* Navigationslänkarna ligger på rad med lite mellanrum */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.8rem;
+    font-size: 1.05rem;
+}
+
+/* Länkarna får samma färg som resten av headern */
+.nav-links a {
+    color: #f5e3c0;
+}
+
+/* Understrykning när man hovrar över en länk */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero-sektionen har en bakgrundsbild och grid-layout */
+.hero {
+    background: url("../img/pedros_main.png") center/cover no-repeat;
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 1.6fr 0.9fr; /* Vänster = text, höger = Bon Appétit */
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+    position: relative;
+}
+
+/* Mörk overlay över hero-bilden */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Innehållet i hero ska ligga ovanpå overlayen */
+.hero-content,
+.hero-aside {
+    position: relative;
+    z-index: 1;
+}
+
+/* Textdelen i hero, maxbredd och snygg spacing */
+.hero-content {
+    max-width: 520px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+/* Liten text över rubriken */
+.hero-kicker {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d8c8a0;
+}
+
+/* Stor rubrik i hero */
+.hero h1 {
+    font-size: 2.9rem;
+    line-height: 1.05;
+}
+
+/* Begränsar textbredden så det blir lättare att läsa */
+.hero-text {
+    max-width: 34ch;
+}
+
+/* Gemensam stil för knappar */
+.btn {
+    padding: 0.9rem 2.4rem;
+    border-radius: 999px;
+    border: none;
+    background: #f5e3c0;
+    color: #2a1707;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-flex;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+/* Sidodelen i hero, med egen bakgrund och border till vänster */
+.hero-aside {
+    background: #050505;
+    padding: 2rem;
+    border-left: 1px solid #2a2016;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Bon Appétit-bilden större och högre upp */
+.hero-aside-logo img {
+    width: 180px;
+    margin-bottom: 1.2rem;
+}
+
+/* Texten i aside ligger till vänster */
+.hero-aside-text {
+    width: 100%;
+    text-align: left;
+}
+
+/* Rubrik i aside */
+.hero-aside-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Footer med mörk bakgrund och tunn linje överst */
+.site-footer {
+    background: #050505;
+    border-top: 1px solid #2b2318;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+/* Footer-inner är en grid med kolumner */
+.footer-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1.5rem 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Rubriker i footer-kolumnerna */
+.footer-column h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Texten i footer-kolumnerna är lite mindre och ljusare */
+.footer-column p {
+    font-size: 0.9rem;
+    color: #c9b797;
+}
+
+/* Listor i footer ligger bredvid varandra med gap */
+.listor {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Tar bort punkter på listor i footer */
+.listor ol {
+    list-style: none;
+}
+.listor li + li {
+    margin-top: 0.15rem;
+}
+
+/* Sociala ikoner ligger på rad och är lite större */
+.social-icons {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+
+/* Wrapper runt social-ikonerna */
+.social-icon {
+    display: inline-flex;
+}
+
+/* Logotypen i footer-brand får en fast bredd */
+.footer-brand img {
+    width: 75px;
+    margin-bottom: 0.3rem;
+}
+
+/* Franchise-texten är lite mindre */
+#franchise {
+    font-size: 0.9rem;
+}
+
+/* Understrykning på franchise-texten */
+.franchise-text {
+    text-decoration: underline;
+}
+
+/* Copyright-raden längst ner i footern */
+.copyright {
+    border-top: 1px solid #2b2318;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.78rem;
+    color: #c9b797;
+}
+
+/* Responsivitet för mindre skärmar, typ mobil */
+@media (max-width: 800px) {
+    .nav {
+        justify-content: flex-start;
+    }
+
+    .nav-links {
+        gap: 1.6rem;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.2rem;
+    }
+
+    .hero-aside {
+        border-left: none;
+        border-top: 1px solid #2b2318;
+        padding-top: 1.6rem;
+        align-items: flex-start;
+    }
+
+    .hero-aside-logo img {
+        width: 130px;
+    }
+}
+
+/* Footer-grid för desktop, fyra kolumner */
+@media (min-width: 980px) {
+    .footer-inner {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-brand {
+        text-align: right;
+    }
+}
+
