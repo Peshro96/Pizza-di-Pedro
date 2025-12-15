@@ -36,21 +36,24 @@ a {
 .site-header {
     background: #000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.6);
-    min-height: 110px; /* Gör headern lite högre så loggan syns */
+    min-height: 90px; /* Minskad från 110px */
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center; /* Centrerar innehållet vertikalt */
 }
 
 /* Navigationen ligger centrerad och har lite padding */
 .nav {
     max-width: 1100px;
     margin: auto;
-    padding: 2rem 1.2rem 2rem; /* Mer padding för högre header */
+    padding: 1rem 1.2rem; /* Minskad padding */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 /* Logotypen placeras längst till vänster i nav */
@@ -61,9 +64,10 @@ a {
 
 /* Logotypbilden får en fast bredd */
 .nav-logo img {
-    width: 120px; /* Gör loggan större */
-    max-height: 100px;
+    width: 90px; /* Minskad från 80px till 90px */
+    height: auto;
 }
+
 
 /* Hamburgarknapp */
 .nav-toggle {
